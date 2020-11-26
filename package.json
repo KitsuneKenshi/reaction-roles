@@ -1,0 +1,27 @@
+{
+  "name": "reaction-roles",
+  "version": "1.0.0",
+  "description": "just smth",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kall7/reaction-roles.git"
+  },
+  "keywords": [
+    "reaction-roles"
+  ],
+  "author": "Kalinka & Legolas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kall7/reaction-roles/issues"
+  },
+  "homepage": "https://github.com/Kall7/reaction-roles#readme",
+  "dependencies": {
+    "ascii-table": "0.0.9",
+    "discord.js": "^12.5.1",
+    "quick.db": "^7.1.3"
+  }
+}

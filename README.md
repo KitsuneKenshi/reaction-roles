@@ -16,8 +16,8 @@ P.S. if there was an issue while trying to start bot DM me on discord ( ٴ{°^°
 
 # Create menu
 To create rr menu use command !rr create < role menu* > < type of rr** > 
-* - Do not use spaces in name. 
-** - Single or multi roles. 
+\* - Do not use spaces in name. 
+\** - Single or multi roles. 
 
 # Adding reaction to menu
 To add reaction to menu use command !rr add < role menu > < role >  

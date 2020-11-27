@@ -62,7 +62,7 @@ module.exports = {
         return;
       }
       let type;
-      if (args[2] == `single` || args[2] == `multi`) type = args[2];
+      if (args[2].toLowerCase() == `single` || args[2].toLowerCase() == `multi`) type = args[2];
       else type = "multi";
       let reactionEmbed = new discord.MessageEmbed()
         .setTitle(args[1])

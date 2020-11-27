@@ -32,8 +32,8 @@ To configurate:
       Done color is changed!
   
   # Contact
-  If you want to contact me or my friend dm us on Discord: 
-  Me: ٴ{°^°}Kall766{°^°}ٴ.js#0016
-  My Friend: Legal#2020
+  If you want to contact me or my friend dm us on Discord: \n
+  Me: ٴ{°^°}Kall766{°^°}ٴ.js#0016 \n
+  My Friend: Legal#2020 \n
   
   

@@ -5,7 +5,7 @@ module.exports = {
   aliases: ["rr"],
   category: "Utility",
   description: "just reaction role",
-  usage: "rr <create || add || remove> <name> <role>",
+  usage: "rr <create || add || remove> <name> <role> <emoji>",
   run: async (client, message, args) => {
     if (!message.member.hasPermission("MANAGE_ROLES")) {
       let embed = new discord.MessageEmbed()
@@ -45,6 +45,7 @@ module.exports = {
         return;
       }
       let menus = db.get(`rr_${message.guild.id}`);
+      if(!menus) menus = []
       for (let i = 0; i < menus.length; i++) {
         if (menus[i].Name == args[1]) {
           return message.channel.send(
@@ -62,8 +63,8 @@ module.exports = {
         return;
       }
       let type;
-      if (args[2].toLowerCase() == `single` || args[2].toLowerCase() == `multi`) type = args[2];
-      else type = "multi";
+      if (args[2] == `single` || args[2] == `multi`) type = args[2];
+      else type = "multi"
       let reactionEmbed = new discord.MessageEmbed()
         .setTitle(args[1])
         .setTimestamp(Date.now())
@@ -96,6 +97,15 @@ module.exports = {
     }
     if (args[0] == "add") {
       let menus = db.get(`rr_${message.guild.id}`);
+      if(!menus) {
+        let embed = new discord.MessageEmbed()
+          .setTitle(` Wrong Usage`)
+          .setDescription("There's no menus created!")
+          .setColor("RED");
+        let msg = await message.channel.send(embed);
+        msg.delete({ timeout: 5000 });
+        return;
+      }
       if (!args[1]) {
         let embed = new discord.MessageEmbed()
           .setTitle(` Wrong Usage`)
@@ -229,7 +239,8 @@ module.exports = {
       }
       embed = new discord.MessageEmbed()
         .setTitle(menu.Name)
-        .setDescription(desc.join("\n"));
+        .setDescription(desc.join("\n"))
+        .setColor(menu.color)
       rmsg.edit(embed);
       db.set(`rr_${message.guild.id}`, menus);
       embed = new discord.MessageEmbed()
@@ -243,6 +254,15 @@ module.exports = {
       if (!args[1])
         return message.channel.send(`Please provide reaction menu name`);
       let menus = db.get(`rr_${message.guild.id}`);
+      if(!menus) {
+        let embed = new discord.MessageEmbed()
+          .setTitle(` Wrong Usage`)
+          .setDescription("There's no menus created!")
+          .setColor("RED");
+        let msg = await message.channel.send(embed);
+        msg.delete({ timeout: 5000 });
+        return;
+      }
       let menu;
       let index;
       for (let i = 0; i < menus.length; i++) {
@@ -313,6 +333,15 @@ module.exports = {
     }
     if (args[0] == "remove") {
       let menus = db.get(`rr_${message.guild.id}`);
+      if(!menus) {
+        let embed = new discord.MessageEmbed()
+          .setTitle(` Wrong Usage`)
+          .setDescription("There's no menus created!")
+          .setColor("RED");
+        let msg = await message.channel.send(embed);
+        msg.delete({ timeout: 5000 });
+        return;
+      }
       if (!args[1]) {
         let embed = new discord.MessageEmbed()
           .setTitle(` Wrong Usage`)
@@ -398,7 +427,7 @@ module.exports = {
       let embed = new discord.MessageEmbed()
           .setTitle(menu.Name)
           .setDescription(desc.join("\n"))
-          .setColor(args[2]);
+          .setColor(menu.color);
         rmsg.edit(embed);
         
         let resmsg = await message.channel.send(`Deleted a reactionrole`);

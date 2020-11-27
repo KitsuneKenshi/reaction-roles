@@ -13,8 +13,13 @@ token = "YOUR_BOT_TOKEN"
 
 Enjoy!
 P.S. if there was an issue while trying to start bot DM me on discord ( ٴ{°^°}Kall766{°^°}ٴ.js#0016 ) or use Issues tab in repository!
- 
-  
+
+# Packages used
+  Quick.db: 7.1.2  
+  discord.js: 12.5.0  
+  dotenv: 8.2.0  
+  ascii-table: 0.0.9  
+
 # Contact
   If you want to contact me or my friend dm us on Discord:   
   Me: ٴ{°^°}Kall766{°^°}ٴ.js#0016  

@@ -15,10 +15,10 @@ Enjoy!
 P.S. if there was an issue while trying to start bot DM me on discord ( ٴ{°^°}Kall766{°^°}ٴ.js#0016 ) or use Issues tab in repository!
 
 # Create menu
-To create rr menu use command !rr create < role menu* > < type of rr** > 
-\* - Do not use spaces in name. 
-\** - Single or multi roles. 
-
+To create rr menu use command !rr create < role menu* > < type of rr** >   
+\* - Do not use spaces in name.   
+\** - Single or multi roles.   
+ 
 # Adding reaction to menu
 To add reaction to menu use command !rr add < role menu > < role >  
 When you done this there should appear message, react under it with emoji bot have access to!

@@ -63,7 +63,7 @@ module.exports = {
         return;
       }
       let type;
-      if (args[2] == `single` || args[2] == `multi`) type = args[2];
+      if (args[2].toLowerCase() == `single` || args[2].toLowerCase() == `multi`) type = args[2];
       else type = "multi"
       let reactionEmbed = new discord.MessageEmbed()
         .setTitle(args[1])
@@ -118,7 +118,7 @@ module.exports = {
       let menu;
       let index;
       for (let i = 0; i < menus.length; i++) {
-        if (menus[i].Name == args[1]) {
+        if (menus[i].Name.toLowerCase() == args[1].toLowerCase()) {
           menu = menus[i];
           index = i;
         }

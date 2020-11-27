@@ -5,7 +5,7 @@ module.exports = {
   aliases: ["rr"],
   category: "Utility",
   description: "just reaction role",
-  usage: "rr <create || add || remove> <name> <role> <emoji>",
+  usage: "rr <create || add || remove> <name> <role>",
   run: async (client, message, args) => {
     if (!message.member.hasPermission("MANAGE_ROLES")) {
       let embed = new discord.MessageEmbed()

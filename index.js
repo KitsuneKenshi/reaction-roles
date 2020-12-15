@@ -150,7 +150,7 @@ client.on("messageReactionRemove", async (reaction, user) => {
           index = i;
         }
       }
-      if (index) {
+      if (index != -1) {
         menu.usersReacted.splice(index, 1);
         console.log(menu.usersReacted)
         menus[menuIndex] = menu;

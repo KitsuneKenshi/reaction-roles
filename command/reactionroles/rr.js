@@ -437,5 +437,50 @@ module.exports = {
         message.channel.send(`This role in this menu doesn't exist!`)
       }
     }
+    if(args[0].toLowerCase() == "delete" || args[0].toLowerCase() == "del") {
+      let name = args[1]
+      if(!name) {
+        let embed = new discord.MessageEmbed()
+          .setTitle(`Wrong Usage`)
+          .setDescription("Please provid name")
+          .setColor("RED");
+        let msg = await message.channel.send(embed);
+        msg.delete({ timeout: 5000 });
+        return;
+      }
+      let menus = db.get(`rr_${message.guild.id}`)
+      let menu;
+      let menuIndex;
+      if(!menus) {
+        let embed = new discord.MessageEmbed()
+          .setTitle(` Wrong Usage`)
+          .setDescription("There's no role menus")
+          .setColor("RED");
+        let msg = await message.channel.send(embed);
+        msg.delete({ timeout: 5000 });
+        return;
+      }
+      for(let i = 0; i < menus.length; i++) {
+        if(menus[i].Name.toLowerCase() == name.toLowerCase()) {
+          menu = menus[i]
+          menuIndex = i
+        }
+      }
+      if(!menu && menuIndex != -1) {
+        let embed = new discord.MessageEmbed()
+          .setTitle(` Wrong Usage`)
+          .setDescription("Couldn't find Role menu with that name")
+          .setColor("RED");
+        let msg = await message.channel.send(embed);
+        msg.delete({ timeout: 5000 });
+        return;
+      }
+      menus.splice(menuIndex, 1)
+      db.set(`rr_${message.guild.id}`, menus)
+      let embed = new discord.MessageEmbed()
+          .setDescription(`Role menu with name ${menu.Name} got deleted`)
+          .setColor("RED");
+      return message.channel.send(embed);
+    }
   }
 };

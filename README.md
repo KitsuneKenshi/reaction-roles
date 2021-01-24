@@ -1,6 +1,6 @@
 # Reaction Role Bot
 This project is for all of you who doesn't know how to work with reaction.  
-Feel free to use this code in your bots, and only thing I would like you to do is credit me(Kall7) and my friend(legal).  
+Feel free to use this code in your bots, and only thing I would like you to do is credit me(Kall7) and legal.  
 We have spent about 7-8h on it testing and fixing bugs, hope you'll enjoy it. 
  
 # How to set up
@@ -35,7 +35,7 @@ Bot will automatically remove reaction and role from menu
 
 # Contact
   If you want to contact me or my friend dm us on Discord:   
-  Me: ٴ{°^°}Kall766{°^°}ٴ.js#0016  
-  My Friend: Legal#2020  
+  Kall: ٴ{°^°}Kall766{°^°}ٴ.js#0016  
+  Legal: Legal#2020  
   
   

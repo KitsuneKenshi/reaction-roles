@@ -1,3 +1,6 @@
+# OUTDATED
+Code in this repository is outdated and may have some vulnerabilities! I do not guarantee that it will work!  
+
 # Reaction Role Bot
 This project is for all of you who doesn't know how to work with reaction.  
 Feel free to use this code in your bots, and only thing I would like you to do is credit me(Kall7) and legal.  
